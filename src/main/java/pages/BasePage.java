@@ -31,7 +31,6 @@ public class BasePage {
         loginPage.typeLogin(usernameAndPassword.username());
         loginPage.typePassword(usernameAndPassword.password());
         loginPage.clickLoginButton();
-
         return new InventoryPage();
     }
 }

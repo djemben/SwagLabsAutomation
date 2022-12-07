@@ -1,9 +1,9 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import pages.InventoryPage;
 import utils.Credentials;
 
@@ -23,7 +23,6 @@ public class InventorySelectionSteps {
     @When("User add one item to cart")
     public void user_add_one_item_to_cart() {
         inventoryPage.addToCartOrRemoveRandomItem();
-        int a = 2;
     }
 
     @When("User add two items to cart")
@@ -32,9 +31,17 @@ public class InventorySelectionSteps {
         throw new io.cucumber.java.PendingException();
     }
 
+    @And("Cart icon shows number of added items")
+    public void cartIconShowsNumberOfAddedItems() {
+
+    }
+
     @Then("Cart contains selected items")
     public void cart_contains_selected_items() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
+
 }
